@@ -88,10 +88,10 @@ hex: $(TARGET)
 	$(PREFIX)objcopy -O binary $< temp.bin
 	python3 makehex.py temp.bin > nnalgo.hex
 	rm temp.bin
-	
 
 clean:
-	rm -rf $(GENDIR)*
+	rm -rf $(GENDIR)
+	rm nnalgo.hex
 
 echo:
 	@echo $(OBJS)

@@ -1,9 +1,10 @@
 #include "Matrix_IO.h"
 #include "tinyio.h"
+#include "soc.h"
 
 int8_t getRandomNumber(){
-	// return rand()%32-16;
-	return 5;
+//	return rand()%32-16;
+	return ((get_mtime() % 32) -16);
 }
 
 void randFillMatrix2D(const uint32_t height,const uint32_t width, int8_t matrix[height][width]){

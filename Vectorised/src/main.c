@@ -46,9 +46,9 @@ unsigned long getCycles(void){
 }
 
 void testbench_vectorAdd(unsigned long *Cycles_NN_operations){
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 6; i++) {
 		unsigned long startCycles, endCycles;
-		const uint32_t N[4] = {4,8,64,128};
+		const uint32_t N[7] = {4,8,16,32,64,128,256};
 		int8_t A[N[i]],B[N[i]],C[N[i]];
 		printf_("\ntestbench_vecAdd\n\n");
 		randFillVector(N[i],A);
@@ -72,9 +72,9 @@ void testbench_vectorAdd(unsigned long *Cycles_NN_operations){
 }
 
 void testbench_vectorReLu(unsigned long *Cycles_NN_operations){
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 6; i++) {
 		unsigned long startCycles, endCycles;
-		const uint32_t N[4] = {4,8,16,32};
+		const uint32_t N[7] = {4,8,16,32,64,128,256};
 		int8_t A[N[i]],C[N[i]];
 		printf_("\ntestbench_ReLu\n\n");
 		randFillVector(N[i],A);
@@ -95,9 +95,9 @@ void testbench_vectorReLu(unsigned long *Cycles_NN_operations){
 }
 
 void testbench_vectorReLu6(unsigned long *Cycles_NN_operations){
-	for (int i = 0; i <= 3; i++) {
+	for (int i = 0; i <= 6; i++) {
 		unsigned long startCycles, endCycles;
-		const uint32_t N[4] = {4,8,16,32};
+		const uint32_t N[7] = {4,8,16,32,64,128,256};
 		int8_t A[N[i]],C[N[i]];
 		printf_("\ntestbench_ReLu6\n\n");
 		randFillVector(N[i],A);

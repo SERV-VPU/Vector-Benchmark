@@ -90,7 +90,8 @@ hex: $(TARGET)
 	rm temp.bin
 
 clean:
-	rm -rf $(GENDIR)*
+	rm -rf $(GENDIR)
+	rm nnalgo.hex
 
 echo:
 	@echo $(OBJS)
